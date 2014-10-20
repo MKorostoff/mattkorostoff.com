@@ -1,0 +1,27 @@
+uuid: 7f2fbe8b-da35-460f-b556-86f00f75ad95
+langcode: en
+status: true
+dependencies:
+  entity:
+    - system.menu.comics-i-write
+  module:
+    - system
+  theme:
+    - matt
+id: comicsiwrite
+theme: matt
+region: sidebar
+weight: -6
+provider: null
+plugin: 'system_menu_block:comics-i-write'
+settings:
+  visibility: {  }
+  id: 'system_menu_block:comics-i-write'
+  label: 'Comics I write'
+  provider: system
+  label_display: visible
+  cache:
+    max_age: -1
+    contexts: {  }
+  level: 1
+  depth: 0

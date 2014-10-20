@@ -1,0 +1,55 @@
+uuid: 64f22ecd-88f8-4812-8705-0538470166e9
+langcode: en
+status: true
+dependencies:
+  entity:
+    - field.field.node.article.body
+    - field.field.node.article.field_article_comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - comment
+    - image
+    - taxonomy
+    - text
+    - user
+id: node.article.default
+label: null
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  field_image:
+    type: image
+    weight: 0
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  body:
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  field_tags:
+    type: taxonomy_term_reference_link
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    label: above
+  links:
+    weight: 3
+  field_article_comment:
+    weight: 4
+    label: above
+    settings:
+      pager_id: '0'
+    third_party_settings: {  }
+    type: comment_default
+hidden:
+  langcode: true
+  comment: true
+third_party_settings: {  }

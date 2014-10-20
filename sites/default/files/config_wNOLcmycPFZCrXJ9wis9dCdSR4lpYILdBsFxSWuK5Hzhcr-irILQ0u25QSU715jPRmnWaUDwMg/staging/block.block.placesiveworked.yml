@@ -1,0 +1,27 @@
+uuid: 1098678e-2b4c-408c-8933-51f874ae4ec4
+langcode: en
+status: true
+dependencies:
+  entity:
+    - system.menu.places-worked
+  module:
+    - system
+  theme:
+    - matt
+id: placesiveworked
+theme: matt
+region: sidebar
+weight: -5
+provider: null
+plugin: 'system_menu_block:places-worked'
+settings:
+  visibility: {  }
+  id: 'system_menu_block:places-worked'
+  label: 'Places I''ve worked'
+  provider: system
+  label_display: visible
+  cache:
+    max_age: -1
+    contexts: {  }
+  level: 1
+  depth: 0

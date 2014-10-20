@@ -1,0 +1,27 @@
+uuid: 8df5a033-a789-45e3-a218-248cda12bad9
+langcode: en
+status: true
+dependencies:
+  entity:
+    - system.menu.get-in-touch
+  module:
+    - system
+  theme:
+    - matt
+id: getintouch
+theme: matt
+region: sidebar
+weight: -4
+provider: null
+plugin: 'system_menu_block:get-in-touch'
+settings:
+  visibility: {  }
+  id: 'system_menu_block:get-in-touch'
+  label: 'Get in touch'
+  provider: system
+  label_display: visible
+  cache:
+    max_age: -1
+    contexts: {  }
+  level: 1
+  depth: 0

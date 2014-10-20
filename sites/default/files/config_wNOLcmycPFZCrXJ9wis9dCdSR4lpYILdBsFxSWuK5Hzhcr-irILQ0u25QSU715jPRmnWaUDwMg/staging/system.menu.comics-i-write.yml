@@ -1,0 +1,8 @@
+uuid: a77239c5-4d40-4e89-8300-f9d04f6140b6
+langcode: en
+status: true
+dependencies: {  }
+id: comics-i-write
+label: 'Comics I write'
+description: ''
+locked: false

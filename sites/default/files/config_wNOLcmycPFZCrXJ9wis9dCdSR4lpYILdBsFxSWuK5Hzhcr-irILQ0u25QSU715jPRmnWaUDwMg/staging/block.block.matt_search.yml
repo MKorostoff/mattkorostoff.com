@@ -1,0 +1,23 @@
+uuid: f620c492-915a-4cb2-a500-d1ec1aff486d
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - matt
+id: matt_search
+theme: matt
+region: '-1'
+weight: -2
+provider: null
+plugin: search_form_block
+settings:
+  visibility: {  }
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  cache:
+    max_age: 0
+    contexts: {  }

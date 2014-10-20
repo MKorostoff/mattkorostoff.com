@@ -1,0 +1,11 @@
+uuid: 67231890-918e-4c8d-bc00-fefe3a916bda
+name: 'Creative Juices'
+mail: mkorostoff@gmail.com
+slogan: 'A Blog by Matt Korostoff'
+page:
+  403: ''
+  404: ''
+  front: node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en

@@ -1,0 +1,27 @@
+uuid: 89c54c46-258b-4ef3-834c-76f22e5ddd1d
+langcode: en
+status: false
+dependencies:
+  entity:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - matt
+id: matt_main_menu
+theme: matt
+region: '-1'
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  visibility: {  }
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: -1
+    contexts: {  }
+  level: 1
+  depth: 1

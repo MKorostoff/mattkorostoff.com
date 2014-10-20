@@ -1,0 +1,23 @@
+uuid: 87c86db9-2098-43c9-a634-523cd8fae790
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - matt
+id: matt_content
+theme: matt
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  visibility: {  }
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: 0
+    contexts: {  }

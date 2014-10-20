@@ -1,0 +1,23 @@
+uuid: ff87e86c-ec23-49ab-9400-fbcffe0c36fc
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - matt
+id: matt_breadcrumbs
+theme: matt
+region: '-1'
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  visibility: {  }
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: 0
+    contexts: {  }

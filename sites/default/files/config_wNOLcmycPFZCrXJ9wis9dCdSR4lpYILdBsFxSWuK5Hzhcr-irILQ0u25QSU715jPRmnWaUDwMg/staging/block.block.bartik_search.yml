@@ -1,0 +1,23 @@
+uuid: 95947259-8bae-4647-8000-b2091396aa4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bartik
+id: bartik_search
+theme: bartik
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  visibility: {  }
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  cache:
+    max_age: 0
+    contexts: {  }

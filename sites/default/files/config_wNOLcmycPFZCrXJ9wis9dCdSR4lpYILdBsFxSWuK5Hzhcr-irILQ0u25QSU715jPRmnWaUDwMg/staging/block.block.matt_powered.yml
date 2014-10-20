@@ -1,0 +1,23 @@
+uuid: ba684df1-9960-486f-a61b-2766518fb74b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - matt
+id: matt_powered
+theme: matt
+region: messages
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  visibility: {  }
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+  cache:
+    max_age: 0
+    contexts: {  }
