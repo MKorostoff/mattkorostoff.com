@@ -1,0 +1,52 @@
+{#
+/**
+ * Matt's layout
+ * Generated on: Mon, 13 Jan 14 21:26:08 +0100
+ */
+#}
+<div class="outer">
+  <header>
+    {% if page.navigation %}
+      {{ page.navigation }}
+    {% endif %}
+    <a class="logo-link" href="/">
+      <img id="logo" src="/themes/matt/img/logo.png" />
+    </a>
+
+    <div class="branding-text">
+      <a class="branding-text-link" href="/">
+        <h2 class="site-name">Creative Juices</h2>
+      </a>
+      <h3 class="site-slogan">A blog by Matt Korostoff</h2>
+    </div>
+
+  </header>
+
+{% if page.messages %}
+  {{ messages }}
+{% endif %}
+
+
+
+    {% if page.content %}
+      {{ page.content }}
+    {% endif %}
+      <div class="icon-matt">
+        <div class="sidebar-top">
+          <img src="/themes/matt/img/pixel_matt.png" alt="matt" />
+        </div>
+      </div>
+
+      {{ page.sidebar }}
+
+      <div class="sidebar-two-outer">
+        {{ page.sidebar_two }}
+      </div>
+
+{% if page.footer %}
+  {{ page.footer }}
+{% endif %}
+
+</div>
+
+

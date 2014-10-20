@@ -1,0 +1,23 @@
+name: 'matt'
+type: theme
+description: 'My first custom drupal 8 theme'
+stylesheets:
+  all:
+    - css/styles.css
+# js:
+#   js/matt.js: {}
+js:
+  js/modernizr.custom.04204.js: {}
+regions:
+  header: 'Header'
+  messages: 'Messages'
+  navigation: 'Navigation'
+  sidebar: 'Sidebar'
+  sidebar_two: 'Sidebar Two'
+  content: 'Main content'
+  footer: 'Footer'
+features:
+    - favicon
+    - logo
+version: 8.0.x
+core: 8.x

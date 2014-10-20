@@ -1,0 +1,17 @@
+config_devel.settings:
+  type: mapping
+  label: config devel settings
+  mapping:
+    auto_import:
+      type: sequence
+      sequence:
+        - type: mapping
+          mapping:
+            filename:
+              type: string
+            hash:
+              type: string
+    auto_export:
+      type: sequence
+      sequence:
+        - type: string

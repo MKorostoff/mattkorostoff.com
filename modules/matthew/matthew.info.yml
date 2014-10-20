@@ -1,0 +1,5 @@
+name: Matthew
+description: A simple hello world module.
+core: 8.x
+package: Custom
+type: module

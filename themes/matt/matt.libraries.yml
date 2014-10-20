@@ -1,0 +1,4 @@
+matt-corescripts:
+  version: VERSION
+  js:
+    js/modernizr.custom.04204.js: {}
