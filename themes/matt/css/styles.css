@@ -96,6 +96,17 @@ article.node--view-mode-teaser .links {
   display: block;
 }
 
+#block-nextpreviousblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .field-node--field-tags {
   margin-top: 5px;
 }
@@ -675,3 +686,4 @@ html.no-flexbox header,
 html.no-flexbox .region-content {
   margin-top: 0 !important;
 }
+
