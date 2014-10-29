@@ -4,12 +4,10 @@ status: true
 dependencies:
   entity:
     - field.field.node.article.body
-    - field.field.node.article.field_article_comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - comment
     - entity_reference
     - image
     - path
@@ -78,11 +76,7 @@ content:
     weight: 30
     settings: {  }
     third_party_settings: {  }
-  field_article_comment:
-    weight: 31
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
 hidden:
   comment: true
+  field_article_comment: true
 third_party_settings: {  }

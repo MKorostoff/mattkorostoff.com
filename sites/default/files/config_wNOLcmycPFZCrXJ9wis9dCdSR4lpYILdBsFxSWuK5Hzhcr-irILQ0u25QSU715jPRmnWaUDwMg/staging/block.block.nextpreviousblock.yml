@@ -1,0 +1,28 @@
+uuid: 49ee2b4c-f40f-4c30-be2a-42653899c407
+langcode: en
+status: true
+dependencies:
+  module:
+    - matthew
+  theme:
+    - matt
+id: nextpreviousblock
+theme: matt
+region: content
+weight: -7
+provider: null
+plugin: next_previous_block
+settings:
+  visibility:
+    node_type:
+      id: node_type
+      bundles:
+        article: article
+      negate: false
+  id: next_previous_block
+  label: 'Next Previous Block'
+  provider: matthew
+  label_display: '0'
+  cache:
+    max_age: 0
+    contexts: {  }
