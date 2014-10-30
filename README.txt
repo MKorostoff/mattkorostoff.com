@@ -25,7 +25,6 @@ Legal information about Drupal:
 CONFIGURATION AND FEATURES
 --------------------------
 
-
 Drupal core (what you get when you download and extract a drupal-x.y.tar.gz or
 drupal-x.y.zip file from https://drupal.org/project/drupal) has what you need to
 get started with your website. It includes several modules (extensions that add
