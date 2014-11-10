@@ -56,7 +56,7 @@ class NextPreviousBlock extends BlockBase {
    * @param  string $created_time A unix time stamp
    * @return string               an html link to the next node
    */
-  private function generateNext(string $created_time) {
+  private function generateNext($created_time) {
     return $this->generateNextPrevious('next', $created_time);
   }
 
@@ -67,7 +67,7 @@ class NextPreviousBlock extends BlockBase {
    * @param  string $created_time a Unix time stamp
    * @return string               an html link to the next or previous node
    */
-  private function generateNextPrevious($direction = 'next', string $created_time) {
+  private function generateNextPrevious($direction = 'next', $created_time) {
 
     if ($direction === 'next') {
       $comparison_opperator = '>';
