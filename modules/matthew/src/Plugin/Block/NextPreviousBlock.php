@@ -32,61 +32,75 @@ class NextPreviousBlock extends BlockBase {
     $created_time = $node->getCreatedTime();
     $link = "";
 
-    $link .= $this->_generate_previous($created_time);
-    $link .= $this->_generate_next($created_time);
+    $link .= $this->generatePrevious($created_time);
+    $link .= $this->generateNext($created_time);
 
     return array('#markup' => $link);
   }
 
-  private function _generate_previous($created_time) {
-    //Lookup 1 node older than the current node
-    $query = \Drupal::entityQuery('node');
-    $previous = $query->condition('created', $created_time, '<')
-      ->condition('type', 'article')
-      ->sort('created', 'DESC')
-      ->range(0, 1)
-      ->execute();
-
-    // If the currently viewed node has at least 1 node older than itself, build
-    // a "Previous" link
-    if (!empty($previous) && is_array($previous)) {
-      $previous = array_values($previous);
-      $previous = $previous[0];
-
-      //Find the alias of the previous node
-      $previous_url = \Drupal::service('path.alias_manager')->getAliasByPath('node/' . $previous);
-
-      //Build the URL of the previous node
-      $previous_url = Url::fromUri('base://' . $previous_url);
-
-      //Build the HTML for the previous node
-      return \Drupal::l(t('Previous Article'), $previous_url);
-    }
+  /**
+   * Lookup the previous node, i.e. youngest node which is still older than the node
+   * currently being viewed.
+   *
+   * @param  string $created_time A unix time stamp
+   * @return string               an html link to the previous node
+   */
+  private function generatePrevious($created_time) {
+    return $this->generateNextPrevious('prev', $created_time);
   }
 
-  private function _generate_next($created_time) {
-    //Lookup 1 node younger than the current node
+  /**
+   * Lookup the next node, i.e. oldest node which is still younger than the node
+   * currently being viewed.
+   *
+   * @param  string $created_time A unix time stamp
+   * @return string               an html link to the next node
+   */
+  private function generateNext(string $created_time) {
+    return $this->generateNextPrevious('next', $created_time);
+  }
+
+  /**
+   * Lookup the next or previous node
+   *
+   * @param  string $direction    either 'next' or 'previous'
+   * @param  string $created_time a Unix time stamp
+   * @return string               an html link to the next or previous node
+   */
+  private function generateNextPrevious($direction = 'next', string $created_time) {
+
+    if ($direction === 'next') {
+      $comparison_opperator = '>';
+      $sort = 'ASC';
+      $display_text = t('Next Article');
+    }
+    elseif ($direction === 'prev') {
+      $comparison_opperator = '<';
+      $sort = 'DESC';
+      $display_text = t('Previous Article');
+    }
+
+    //Lookup 1 node younger (or older) than the current node
     $query = \Drupal::entityQuery('node');
-    $next = $query->condition('created', $created_time, '>')
+    $next = $query->condition('created', $created_time, $comparison_opperator)
       ->condition('type', 'article')
-      ->sort('created', 'ASC')
+      ->sort('created', $sort)
       ->range(0, 1)
       ->execute();
 
-    //If this is not the youngest node
+    //If this is not the youngest (or oldest) node
     if (!empty($next) && is_array($next)) {
       $next = array_values($next);
       $next = $next[0];
 
-      //Find the alias of the previous node
+      //Find the alias of the next node
       $next_url = \Drupal::service('path.alias_manager')->getAliasByPath('node/' . $next);
 
-      //Build the URL of the previous node
+      //Build the URL of the next node
       $next_url = Url::fromUri('base://' . $next_url);
 
-      //Build the HTML for the previous node
-      return \Drupal::l(t('Next Article'), $next_url);
+      //Build the HTML for the next node
+      return \Drupal::l($display_text, $next_url);
     }
   }
-
 }
